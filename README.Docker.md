@@ -8,8 +8,7 @@ docker pull ishaagarwal77/fyle-interview-intern-backend:latest
 - Build and Run the container 
 
 ```
-docker container run -d -p 7755:7755 ishaagarwal77/fyle-interview-intern-back
-end
+docker container run -d -p 7755:7755 ishaagarwal77/fyle-interview-intern-backend
 ```
 
 - The server has started on http://localhost:7755/
