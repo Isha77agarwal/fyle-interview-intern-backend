@@ -1,22 +1,27 @@
-### Building and running your application
+### Building and Running Docker file
 
-When you're ready, start your application by running:
-`docker compose up --build`.
+- Take a pull of docker image from docker hub.
+```
+docker pull ishaagarwal77/fyle-interview-intern-backend:latest
+```
 
-Your application will be available at http://localhost:8000.
+- Build and Run the container 
 
-### Deploying your application to the cloud
+```
+docker container run -d -p 7755:7755 ishaagarwal77/fyle-interview-intern-back
+end
+```
 
-First, build your image, e.g.: `docker build -t myapp .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t myapp .`.
+- The server has started on http://localhost:7755/
 
-Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
+- Check the container running 
 
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
-docs for more detail on building and pushing.
+```
+docker container ls
+```
 
-### References
-* [Docker's Python guide](https://docs.docker.com/language/python/)
+- Stop the container
+
+```
+docker container stop <container id>
+```
